@@ -1,0 +1,83 @@
+*{box-sizing: border-box;}
+
+.header{
+    font-size: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.clock{
+    font-size: 32px;
+    font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.start{
+    margin-bottom: 15px;
+}
+
+.time-clock-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 5%;
+    width: 90%;
+    background-color: lightblue;
+    color: white;
+    padding: 5px 0 5px 0;
+    border-radius: 4px;
+    border: 2px solid lightblue;
+
+}
+
+.time-clock-btn:hover{
+    border: 2px solid lightblue;
+    background-color: white;
+    color: lightblue;
+}
+
+.day-container{
+    margin-left: 5% !important;
+    width: 90%;
+}
+
+.date{
+    margin-left: 0;
+    padding-left: 0 !important;
+}
+
+.day{
+    background-color: red;
+    height: 40px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.amount{
+    background-color: blue;
+    height: 40px;
+    position: absolute;
+    width: 50%;
+    left: 20%;
+}
+
+.amount1{
+    background-color: blue;
+    height: 40px;
+    position: absolute;
+    width: 10%;
+    left: 10%;
+}
+
+.amount2{
+    background-color: blue;
+    height: 40px;
+    position: absolute;
+    width: 50%;
+    left: 30%;
+}
