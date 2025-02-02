@@ -46,38 +46,22 @@
     width: 90%;
 }
 
-.date{
+.day-item{
     margin-left: 0;
     padding-left: 0 !important;
 }
 
 .day{
-    background-color: red;
+    background-color: lightgray;
     height: 40px;
-    position: relative;
     margin-bottom: 10px;
+    position: relative;
+    border-radius: 2px;
 }
 
-.amount{
-    background-color: blue;
+.hours{
     height: 40px;
+    background-color: orchid;
     position: absolute;
-    width: 50%;
-    left: 20%;
-}
-
-.amount1{
-    background-color: blue;
-    height: 40px;
-    position: absolute;
-    width: 10%;
-    left: 10%;
-}
-
-.amount2{
-    background-color: blue;
-    height: 40px;
-    position: absolute;
-    width: 50%;
-    left: 30%;
+    border-radius: 2px;
 }
