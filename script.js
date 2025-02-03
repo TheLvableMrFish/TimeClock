@@ -92,10 +92,18 @@ const renderDays=(weekDates, shiftData)=>{
         const dayItem = document.createElement("div")
         dayItem.className = "day-item"
 
+        const totalMinutes = dayData.shifts.reduce((sum, shift)=>{
+            const start = timeToMinutes(shift.start)
+            const end = timeToMinutes(shift.end || getCurrentTime())
+            return sum + (end - start)
+        }, 0)
+
+        let formatedTime = formatMinutes(totalMinutes)
+
         //  Header for the date
         const dateHeader = document.createElement("div")
         dateHeader.className = "date-header"
-        dateHeader.textContent = `${date.toLocaleDateString("en-US", {weekday: "short", year: "numeric", month: "short", day: "numeric"})}`
+        dateHeader.textContent = `${date.toLocaleDateString("en-US", {weekday: "short", year: "numeric", month: "short", day: "numeric"})} Hours: ${formatedTime}`
         dayItem.appendChild(dateHeader)
 
         // Create the timeline container (24-hour view)
@@ -195,6 +203,7 @@ const refreshDisplay =()=>{
 
 
 setInterval(updateClock, 1000)
+setInterval(refreshDisplay, 1000)
 
 
 document.addEventListener("DOMContentLoaded", ()=>{
