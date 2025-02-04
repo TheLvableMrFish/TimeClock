@@ -46,6 +46,7 @@ const removeOldData =(data)=>{
 // ]
 
 const timeToMinutes =(timeStr)=>{
+    console.log(timeStr)
     const parts = timeStr.split(":")
     return parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10)
 }
@@ -199,6 +200,18 @@ const refreshDisplay =()=>{
     const weekDates = getWeekDates(currentSunday)
     const data = removeOldData(loadShiftData())
     renderDays(weekDates, data)
+
+    let totalMinutes = data.reduce((weekSum, day)=>{
+        return weekSum + day.shifts.reduce((daySum, shift)=>{
+            console.log("START", shift.start, "Start")
+            const start = shift.start
+            console.log("current time", getCurrentTime())
+            const end = shift.end || getCurrentTime()
+            return daySum + (timeToMinutes(end) - timeToMinutes(start))
+        }, 0)
+    }, 0)
+
+    document.getElementById("total-hours").textContent = `Total Hours: ${formatMinutes(totalMinutes)}`
 }
 
 
