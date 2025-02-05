@@ -39,6 +39,7 @@
     border: 2px solid lightblue;
     background-color: white;
     color: lightblue;
+    cursor: pointer;
 }
 
 .day-container{
@@ -64,4 +65,41 @@
     background-color: orchid;
     position: absolute;
     border-radius: 2px;
+}
+
+
+.total-hours{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+}
+
+.arrows{
+    margin-left: 5% !important;
+    width: 90%; 
+    justify-content: center;
+    margin-left: 5%;
+    width: 90%;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 15px;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.arrow{
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 5px 0;
+    background-color: lightblue;
+    border-radius: 4px;
+    border: 2px solid lightblue;
+    &:hover{
+        background-color: white;
+        color: lightblue;
+    }
 }

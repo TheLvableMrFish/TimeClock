@@ -139,6 +139,14 @@ const renderDays=(weekDates, shiftData)=>{
     })
 }
 
+const backArrow =()=>{
+
+}
+
+const forwardArrow=()=>{
+    
+}
+
 const startShift =()=>{
     const now = new Date()
     const currentTime = now.toTimeString().slice(0,5)
