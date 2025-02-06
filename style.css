@@ -1,5 +1,9 @@
 *{box-sizing: border-box;}
 
+html, body, .container-fluid{
+    background-color: #FFF7FF;
+}
+
 .header{
     font-size: 36px;
     display: flex;
